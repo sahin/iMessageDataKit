@@ -13,6 +13,8 @@
 		DE682CED1F9168C4002DB01A /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE682CEC1F9168C4002DB01A /* MessagesViewController.swift */; };
 		DE682CF01F9168C4002DB01A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE682CEE1F9168C4002DB01A /* MainInterface.storyboard */; };
 		DE682CF21F9168C4002DB01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE682CF11F9168C4002DB01A /* Assets.xcassets */; };
+		DE682D011F916901002DB01A /* MSMessage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE682CFF1F916901002DB01A /* MSMessage+Extensions.swift */; };
+		DE682D021F916901002DB01A /* MSMessageDataDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE682D001F916901002DB01A /* MSMessageDataDSL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DE682CEF1F9168C4002DB01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		DE682CF11F9168C4002DB01A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE682CF31F9168C4002DB01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE682CFF1F916901002DB01A /* MSMessage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSMessage+Extensions.swift"; sourceTree = "<group>"; };
+		DE682D001F916901002DB01A /* MSMessageDataDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSMessageDataDSL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		DE682CD31F9168C4002DB01A = {
 			isa = PBXGroup;
 			children = (
+				DE682CFD1F916901002DB01A /* Source */,
 				DE682CDC1F9168C4002DB01A /* iMessageDataKit-Demo */,
 				DE682CEB1F9168C4002DB01A /* iMessageDataKit-Demo MessagesExtension */,
 				DE682CE81F9168C4002DB01A /* Frameworks */,
@@ -108,6 +113,23 @@
 				DE682CF31F9168C4002DB01A /* Info.plist */,
 			);
 			path = "iMessageDataKit-Demo MessagesExtension";
+			sourceTree = "<group>";
+		};
+		DE682CFD1F916901002DB01A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DE682CFE1F916901002DB01A /* iMessageDataKit */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DE682CFE1F916901002DB01A /* iMessageDataKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE682CFF1F916901002DB01A /* MSMessage+Extensions.swift */,
+				DE682D001F916901002DB01A /* MSMessageDataDSL.swift */,
+			);
+			path = iMessageDataKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE682D021F916901002DB01A /* MSMessageDataDSL.swift in Sources */,
 				DE682CED1F9168C4002DB01A /* MessagesViewController.swift in Sources */,
+				DE682D011F916901002DB01A /* MSMessage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
