@@ -1,14 +1,15 @@
 <img src="./iMessageDataKitBanner.jpg" alt="iMessageDataKit" />
 
-Store custom data as key-value pairs in `MSMessage` objects.
-
 [![iOS 10 +](https://img.shields.io/badge/iOS-10%2B-brightgreen.svg)](https://github.com/svtek)
+
+Store custom data as key-value pairs in `MSMessage` objects.
 
 ## Contents
 
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+    - [Quick Start](#quick-start)
     - [How it works](#how-it-works)
     - [Resources](#resources)
 - [Idea](#idea)
@@ -31,13 +32,13 @@ Store custom data as key-value pairs in `MSMessage` objects.
 $ gem install cocoapods
 ```
 
-To integrate SnapKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate `iMessageDataKit` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'iMessageDataKit'
 ```
 
-Then, run the following command in Terminal (from your projects root folder):
+Then, run the following command in Terminal (from your project's root folder):
 
 ```bash
 $ pod install
@@ -51,10 +52,13 @@ Drag & drop `Source` folder into your Xcode project.
 
 ## Usage
 
+`iMessageDataKit` extension methods enable you to use an  `MSMessage` object as a dictionary-like key-value store. You can set/get `Int`, `Bool`, `Float`, `Double`, `String` and `Array` values. Arrays should contain objects that conform to `LosslessStringConvertible` protocol.
+
 ### Quick Start
 
 ```swift
 import Messages
+import iMessageDataKit
 
 class MessagesViewController: MSMessagesAppViewController {
 
